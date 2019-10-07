@@ -54,7 +54,7 @@ namespace Capitulo01.Controllers
         //POST: Instituicao/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("InstituicaoID,Nome,Endereco"] Instituicao instituicao)
+        public async Task<IActionResult> Create([Bind("InstituicaoID,Nome,Endereco")] Instituicao instituicao)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,24 @@ namespace Capitulo01.Controllers
             return View(instituicao);
         }
 
-        //GET: Instituicao/Edit/5
+        // GET: Instituicao/Edit/5
+        public async Task<IActionResult> Edit(long? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var instituicao = await _context.Instituicoes.FindAsync(id);
+            if (instituicao == null)
+            {
+                return NotFound();
+            }
+            return View(instituicao);
+        }
+
+        // POST: Instituicao/Edit/5
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(long? id, [Bind("InstituicaoID,Nome,Endereco")] Instituicao instituicao)
@@ -98,6 +115,40 @@ namespace Capitulo01.Controllers
             return View(instituicao);
         }
 
-           
+        // GET: Instituicao/Delete/5
+        public async Task<IActionResult> Delete(long? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var instituicao = await _context.Instituicoes
+                .FirstOrDefaultAsync(m => m.InstituicaoID == id);
+            if (instituicao == null)
+            {
+                return NotFound();
+            }
+
+            return View(instituicao);
+        }
+
+        // POST: Instituicao/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(long? id)
+        {
+            var instituicao = await _context.Instituicoes.FindAsync(id);
+            _context.Instituicoes.Remove(instituicao);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool InstituicaoExists(long? id)
+        {
+            return _context.Instituicoes.Any(e => e.InstituicaoID == id);
+        }
+
+
     }
 }

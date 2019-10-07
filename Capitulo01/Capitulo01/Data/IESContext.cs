@@ -10,13 +10,13 @@ namespace Capitulo01.Data
     public class IESContext : DbContext
     {
 
+        public DbSet<Departamento> Departamentos { get; set; }
+        public DbSet<Instituicao> Instituicoes { get; set; }
+
         public IESContext(DbContextOptions<IESContext> options) : base(options)
         {
 
         }
-
-        public DbSet<Departamento> Departamentos { get; set; }
-        public DbSet<Instituicao> Instituicoes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,7 +28,7 @@ namespace Capitulo01.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=IESCasaDoCodigo;Trusted_Connection=True;MultipleActiveResultSets=true");
-          
+
         }
 
     }
