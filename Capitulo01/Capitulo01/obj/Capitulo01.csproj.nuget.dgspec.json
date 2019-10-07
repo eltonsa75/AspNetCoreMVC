@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Elton\\source\\repos\\Capitulo01\\Capitulo01\\Capitulo01.csproj": {}
+    "E:\\AspNetCoreMVC\\Capitulo01\\Capitulo01\\Capitulo01.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Elton\\source\\repos\\Capitulo01\\Capitulo01\\Capitulo01.csproj": {
+    "E:\\AspNetCoreMVC\\Capitulo01\\Capitulo01\\Capitulo01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elton\\source\\repos\\Capitulo01\\Capitulo01\\Capitulo01.csproj",
+        "projectUniqueName": "E:\\AspNetCoreMVC\\Capitulo01\\Capitulo01\\Capitulo01.csproj",
         "projectName": "Capitulo01",
-        "projectPath": "C:\\Users\\Elton\\source\\repos\\Capitulo01\\Capitulo01\\Capitulo01.csproj",
+        "projectPath": "E:\\AspNetCoreMVC\\Capitulo01\\Capitulo01\\Capitulo01.csproj",
         "packagesPath": "C:\\Users\\Elton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elton\\source\\repos\\Capitulo01\\Capitulo01\\obj\\",
+        "outputPath": "E:\\AspNetCoreMVC\\Capitulo01\\Capitulo01\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

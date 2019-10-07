@@ -58,7 +58,7 @@ namespace Capitulo01.Data
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Departamento}/{action=Index}/{id?}");
             });
         }
     }
