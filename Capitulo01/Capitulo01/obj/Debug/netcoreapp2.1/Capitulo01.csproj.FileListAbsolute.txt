@@ -79,3 +79,4 @@ E:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Depar
 E:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Departamento\Create.g.cshtml.cs
 E:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Departamento\Edit.g.cshtml.cs
 E:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Departamento\Details.g.cshtml.cs
+E:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Departamento\Delete.g.cshtml.cs
