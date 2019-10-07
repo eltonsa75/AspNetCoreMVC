@@ -2,103 +2,102 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Capitulo01.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using Capitulo01.Data;
+using Capitulo01.Models;
+
+using Microsoft.EntityFrameworkCore;
 
 namespace Capitulo01.Controllers
 {
     public class InstituicaoController : Controller
     {
 
-        public static IList<Instituicao> instituicoes = new List<Instituicao>()
+        private readonly IESContext _context;
+
+        public InstituicaoController(IESContext context)
         {
-            new Instituicao()
-            {
-                InstituicaoID = 1,
-                Nome = "UniParaná",
-                Endereco = "Paraná"
-            },
+            _context = context;
+        }
 
-             new Instituicao()
-            {
-                InstituicaoID = 2,
-                Nome = "UniSanta",
-                Endereco = "Santa Catarina"
-            },
+        // GET: Instituicao
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Instituicoes.ToListAsync());
+        }
 
-              new Instituicao()
+        //GET: Instituicao/Details/5
+        public async Task<IActionResult> Details(long? id)
+        {
+            if (id == null)
             {
-                InstituicaoID = 3,
-                Nome = "UniSãoPaulo",
-                Endereco = "São Paulo"
-            },
+                return NotFound();
+            }
 
-               new Instituicao()
+            var instituicao = await _context.Instituicoes
+                .FirstOrDefaultAsync(m => m.InstituicaoID == id);
+            if(instituicao == null)
             {
-                InstituicaoID = 4,
-                Nome = "UniSulgrandense",
-                Endereco = "Rio Grande do Sul"
-            },
+                return NotFound();
+            }
+            return View(instituicao);
+        }
 
-                new Instituicao()
-            {
-                InstituicaoID = 5,
-                Nome = "UniCarioca",
-                Endereco = "Rio de Janeiro"
-            },
-        };
-            
-
-        public ActionResult Create()
+        //GET: Instituicao/Create
+        public IActionResult Create()
         {
             return View();
         }
 
+        //POST: Instituicao/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Instituicao instituicao)
+        public async Task<IActionResult> Create([Bind("InstituicaoID,Nome,Endereco"] Instituicao instituicao)
         {
-            instituicoes.Add(instituicao);
-            instituicao.InstituicaoID = instituicoes.Select(i => i.InstituicaoID).Max() + 1;
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _context.Add(instituicao);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(instituicao);
         }
 
-        public ActionResult Edit(long id)
-        {
-            return View(instituicoes.Where(i => i.InstituicaoID == id).First());
-        }
-
+        //GET: Instituicao/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Instituicao instituicao)
+        public async Task<IActionResult> Edit(long? id, [Bind("InstituicaoID,Nome,Endereco")] Instituicao instituicao)
         {
-            instituicoes.Remove(instituicoes.Where(i => i.InstituicaoID == instituicao.InstituicaoID).First());
-            instituicoes.Add(instituicao);
-            return RedirectToAction("Index");
+            if (id != instituicao.InstituicaoID)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(instituicao);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!InstituicaoExists(instituicao.InstituicaoID))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(instituicao);
         }
 
-        public ActionResult Details(long id)
-        {
-            return View(instituicoes.Where(i => i.InstituicaoID == id).First());
-        }
-
-
-        public ActionResult Delete(long id)
-        {
-            return View(instituicoes.Where(i => i.InstituicaoID == id).First());
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(Instituicao instituicao)
-        {
-            instituicoes.Remove(instituicoes.Where(i => i.InstituicaoID == instituicao.InstituicaoID).First());
-            return RedirectToAction("Index");
-        }
-
-        public IActionResult Index()
-        {
-            return View(instituicoes.OrderBy(i => i.Nome));
-        }
+           
     }
 }
