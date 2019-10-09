@@ -108,7 +108,6 @@ D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Home\
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Instituicao\Create.g.cshtml.cs
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Instituicao\Delete.g.cshtml.cs
-D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Instituicao\Details.g.cshtml.cs
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Instituicao\Edit.g.cshtml.cs
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Instituicao\Index.g.cshtml.cs
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
@@ -123,3 +122,4 @@ D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Capitulo01.Views.
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Capitulo01.csproj.CopyComplete
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LayoutIES.g.cshtml.cs
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Instituicao\Details.g.cshtml.cs
