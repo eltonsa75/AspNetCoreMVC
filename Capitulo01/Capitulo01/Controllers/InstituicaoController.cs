@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Capitulo01.Data;
 using Capitulo01.Models;
 
-using Microsoft.EntityFrameworkCore;
+
 
 namespace Capitulo01.Controllers
 {
@@ -138,9 +138,10 @@ namespace Capitulo01.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(long? id)
         {
-            var instituicao = await _context.Instituicoes.FindAsync(id);
+            var instituicao = await _context.Instituicoes.SingleOrDefaultAsync(m => m.InstituicaoID == id);
             _context.Instituicoes.Remove(instituicao);
             await _context.SaveChangesAsync();
+            TempData["Message"] = "Instituição " + instituicao.Nome.ToUpper() + "foi removida";
             return RedirectToAction(nameof(Index));
         }
 

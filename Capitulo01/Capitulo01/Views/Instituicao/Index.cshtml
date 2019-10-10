@@ -5,6 +5,13 @@
 }
 
 @section Styles {
+    @if (@TempData["Message"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["Message"]
+        </div>
+    }
+
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/datatables/css/jquery.dataTables.min.css" />
     </environment>
