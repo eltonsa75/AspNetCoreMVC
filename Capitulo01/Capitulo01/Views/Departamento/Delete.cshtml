@@ -1,36 +1,59 @@
 ﻿@model Capitulo01.Models.Departamento
 
 @{
-    Layout = null;
+    Layout = "_LayoutIES";
 }
 
-<!DOCTYPE html>
+@section Styles {
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/font-awesome/css/fontawesome.min.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+         asp-fallback-href="~/lib/font-awesome/css/font-awesome.min.css"
+         asp-fallback-test-class="sr-only" asp-fallback-test-property="position"
+         asp-fallback-test-value="absolute" />
+    </environment>
+}
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Deletar o Registro</title>
-</head>
-<body>
-
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Departamento</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="DepartamentoID" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Retornar á Listagem</a>
-    </form>
+<div class="card-block">
+    <div class="card-header text-white bg-secondary text-center h1">
+        Exibindo um Departamento existente
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+            <label asp-for="Nome" class="control-label">Departamento</label>
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="fa fa-key-o" aria-hidden="true"></i>
+                </span>
+                <input asp-for="DepartamentoID" class="form-control" disabled="disabled" />
+            </div>
+            <label asp-for="Nome" class="control-label">Nome</label>
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                </span>
+                <input asp-for="Nome" class="form-control" disabled="disabled" />
+            </div>
+        </div>
+    </div>
+    <div class="card-footer bg-info text-center text-white">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="DepartamentoID" />
+            <input type="submit" value="Remover Instituição" class="btn btn-light" />
+            <a asp-action="Index" class="btn btn-info">Retornar à listagem de intituições </a>
+        </form>
+    </div>
 </div>
-</body>
-</html>
+
+
+
+@section ScriptPage {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
