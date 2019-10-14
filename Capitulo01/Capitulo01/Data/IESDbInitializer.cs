@@ -18,6 +18,18 @@ namespace Capitulo01.Data
                 return;
             }
 
+            var instituicoes = new Instituicao[]
+            {
+                new Instituicao { Nome="UniParaná", Endereco="Paraná"},
+                new Instituicao { Nome="UniAcre", Endereco="Acre"}
+            };
+
+            foreach (Instituicao i in instituicoes)
+            {
+                context.Instituicoes.Add(i);
+            }
+            context.SaveChanges();
+
             var departamentos = new Departamento[]
             {
                 new Departamento { Nome="Ciência da Camputação"},

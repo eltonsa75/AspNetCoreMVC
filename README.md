@@ -11,7 +11,14 @@ Este valor ficará disponivel até que ele seja recuperado.
 No momento de recuperá-lo, ele fica marcado para ser removido ao final da requisição. Você pode dar uma olhada nos métodos Peek() e Keep() de TempData para ver como evitar este comportamento.
 
 
-Arquivo Atualizado
+Virtual
+
+A virtual é uma palavra-chave usada para modificar uma declaração de método, propriedade, indexador ou evento, e permitir que ele seja sobrecrito em uma classe derivada. Para mais informações, recomendo a leitura do artigo Virtual vc Override vs New Keyword in C#.
+
+
+IColletion
+
+A escolha da interface ICOLLETION para ropriedade deve-se ao fato de que, com ela, é possivel iterar(navegar) nos objetos recuperados e modificá-los. Existe ainda a possibilidade de utilizar IEnumerable apenas para navegar, e IList quando precisar de recursos a mais, como uma classificação dos elementos.
 
 
 
