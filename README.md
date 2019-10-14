@@ -21,5 +21,7 @@ IColletion
 A escolha da interface ICOLLETION para ropriedade deve-se ao fato de que, com ela, é possivel iterar(navegar) nos objetos recuperados e modificá-los. Existe ainda a possibilidade de utilizar IEnumerable apenas para navegar, e IList quando precisar de recursos a mais, como uma classificação dos elementos.
 
 
+SelectList()
 
+O SelectList() representa uma lista de itens da qual o usuário pode selecionar um item. em nosso caso, os itens serão expostos em um DropDownList.
 
