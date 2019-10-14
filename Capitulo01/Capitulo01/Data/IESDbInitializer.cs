@@ -11,6 +11,8 @@ namespace Capitulo01.Data
 
         public static void Initialize(IESContext context)
         {
+
+            context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
 
             if (context.Departamentos.Any())
@@ -32,8 +34,8 @@ namespace Capitulo01.Data
 
             var departamentos = new Departamento[]
             {
-                new Departamento { Nome="Ciência da Camputação"},
-                new Departamento { Nome="Ciência de Alimentos"}
+                new Departamento { Nome="Ciência da Camputação", InstituicaoID=1},
+                new Departamento { Nome="Ciência de Alimentos", InstituicaoID=2}
             };
 
             foreach (Departamento d in departamentos)

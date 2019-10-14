@@ -10,8 +10,9 @@ namespace Capitulo01.Models
     {
         public long? DepartamentoID { get; set; }
         public string Nome { get; set; }
+
         public long? InstituicaoID { get; set; }
-        public Instituicao Instituicao{ get; set; }
+        public Instituicao Instituicao { get; set; }
     }
 
     public class Instituicao
