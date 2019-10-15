@@ -153,6 +153,7 @@ namespace Capitulo01.Controllers
         {
             var departamento = await _context.Departamentos.SingleOrDefaultAsync(m => m.DepartamentoID == id);
             _context.Departamentos.Remove(departamento);
+            TempData["Message"] = "Departamento " + departamento.Nome.ToUpper() + "foi removido";
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

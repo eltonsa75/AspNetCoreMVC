@@ -36,7 +36,7 @@ namespace Capitulo01.Controllers
                 return NotFound();
             }
 
-            var instituicao = await _context.Instituicoes
+            var instituicao = await _context.Instituicoes.Include(d => d.Departamentos)
                 .FirstOrDefaultAsync(m => m.InstituicaoID == id);
             if(instituicao == null)
             {
