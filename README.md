@@ -28,5 +28,7 @@ O SelectList() representa uma lista de itens da qual o usuário pode selecionar 
 
 Partial View
 
-Partial Views são visões que contêm código (HTML e/ou Razor) e são projetadas para serem renderizadas como parte de uma visão. elas não possuem layouts, como as visões, e podem ser "inseridas" dentro de diversas visões, como fossem um componente ou controle. 
+Partial Views são visões que contêm código (HTML e/ou Razor) e são projetadas para serem renderizadas como parte de uma visão. elas não possuem layouts, como as visões, e podem ser "inseridas" dentro de diversas visões, como fossem um componente ou controle.
+
+
 
