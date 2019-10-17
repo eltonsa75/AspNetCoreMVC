@@ -7,6 +7,7 @@ using Capitulo01.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Modelo.Cadastros;
 
 namespace Capitulo01.Controllers
 {

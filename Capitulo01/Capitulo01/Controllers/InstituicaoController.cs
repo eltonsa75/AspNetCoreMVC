@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Capitulo01.Data;
 using Capitulo01.Models;
-
-
+using Capitulo01.Data.DAL.Cadastros;
+using Modelo.Cadastros;
 
 namespace Capitulo01.Controllers
 {
@@ -16,16 +16,23 @@ namespace Capitulo01.Controllers
     {
 
         private readonly IESContext _context;
+        private readonly InstituicaoDAL instituicaoDAL;
 
         public InstituicaoController(IESContext context)
         {
             _context = context;
+            instituicaoDAL = new InstituicaoDAL(context);
         }
 
         // GET: Instituicao
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Instituicoes.ToListAsync());
+            return View(await instituicaoDAL.ObterInstituicoesClassificadasPorNome().ToListAsync());
+        }
+
+        public async Task<Instituicao> ObterInstituicaoPorId(long id)
+        {
+            return await _context.Instituicoes.Include(d => d.Departamentos).SingleOrDefaultAsync(m => m.InstituicaoID == id);
         }
 
         //GET: Instituicao/Details/5

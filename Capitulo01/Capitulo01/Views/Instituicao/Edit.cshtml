@@ -1,4 +1,4 @@
-﻿@model Capitulo01.Models.Instituicao
+﻿@model Modelo.Cadastros.Instituicao
 
 @{
     Layout = "_LayoutIES";
@@ -26,15 +26,15 @@
                 <input type="submit" value="Atualizar Intituição" class="btn btn-primary" />
                 <a asp-action="Index" class="btn btn-warning">Retornar à listagem de instituições</a>
             </div>
-</form>
+        </form>
     </div>
     <div class="card-footer bg-info text-center text-white">
         Informe os dados acima e/ou clique em um dos botões de ação
     </div>
-   
+
     @section ScriptPage {
         @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     }
 </div>
-   
+
 

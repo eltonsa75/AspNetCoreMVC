@@ -125,3 +125,6 @@ D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Home\
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Instituicao\Details.g.cshtml.cs
 E:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LayoutIES.g.cshtml.cs
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\_ComDepartamentos.g.cshtml.cs
+E:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\_ComDepartamentos.g.cshtml.cs
+E:\AspNetCoreMVC\Capitulo01\Capitulo01\bin\Debug\netcoreapp2.1\Modelo.dll
+E:\AspNetCoreMVC\Capitulo01\Capitulo01\bin\Debug\netcoreapp2.1\Modelo.pdb

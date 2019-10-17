@@ -1,0 +1,9 @@
+E:\AspNetCoreMVC\Capitulo01\Modelo\bin\Debug\netcoreapp2.1\Modelo.deps.json
+E:\AspNetCoreMVC\Capitulo01\Modelo\bin\Debug\netcoreapp2.1\Modelo.dll
+E:\AspNetCoreMVC\Capitulo01\Modelo\bin\Debug\netcoreapp2.1\Modelo.pdb
+E:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.csprojAssemblyReference.cache
+E:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.csproj.CoreCompileInputs.cache
+E:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.AssemblyInfoInputs.cache
+E:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.AssemblyInfo.cs
+E:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.dll
+E:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.pdb
