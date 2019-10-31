@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Capitulo01.Models;
+using Modelo.Cadastros;
 using System.Linq;
-using System.Threading.Tasks;
-using Capitulo01.Models;
 
 namespace Capitulo01.Data
 {

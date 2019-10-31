@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Capitulo01.Data;
 using Capitulo01.Data.DAL.Cadastros;
-using Capitulo01.Models;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -123,7 +121,7 @@ namespace Capitulo01.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(long? id)
         {
-            var departamento = await DepartamentoDAL.EliminarDepartamentoPorId((long)id);
+            var departamento = await departamentoDAL.EliminarDepartamentoPorId((long)id);
             TempData["Message"] = "Departamento " + departamento.Nome.ToUpper() + "foi removido";
             return RedirectToAction(nameof(Index));
         }
