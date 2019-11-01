@@ -128,3 +128,6 @@ D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\_ComD
 E:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\_ComDepartamentos.g.cshtml.cs
 E:\AspNetCoreMVC\Capitulo01\Capitulo01\bin\Debug\netcoreapp2.1\Modelo.dll
 E:\AspNetCoreMVC\Capitulo01\Capitulo01\bin\Debug\netcoreapp2.1\Modelo.pdb
+D:\AspNetCoreMVC\Capitulo01\Capitulo01\bin\Debug\netcoreapp2.1\Modelo.dll
+D:\AspNetCoreMVC\Capitulo01\Capitulo01\bin\Debug\netcoreapp2.1\Modelo.pdb
+D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Instituicao\_PartialDetailsContentCard.g.cshtml.cs

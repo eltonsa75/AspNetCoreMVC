@@ -688,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Elton\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Hitss_user\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\AspNetCoreMVC\\Capitulo01\\Modelo\\Modelo.csproj",
+      "projectUniqueName": "D:\\AspNetCoreMVC\\Capitulo01\\Modelo\\Modelo.csproj",
       "projectName": "Modelo",
-      "projectPath": "E:\\AspNetCoreMVC\\Capitulo01\\Modelo\\Modelo.csproj",
-      "packagesPath": "C:\\Users\\Elton\\.nuget\\packages\\",
-      "outputPath": "E:\\AspNetCoreMVC\\Capitulo01\\Modelo\\obj\\",
+      "projectPath": "D:\\AspNetCoreMVC\\Capitulo01\\Modelo\\Modelo.csproj",
+      "packagesPath": "C:\\Users\\Hitss_user\\.nuget\\packages\\",
+      "outputPath": "D:\\AspNetCoreMVC\\Capitulo01\\Modelo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Elton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hitss_user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

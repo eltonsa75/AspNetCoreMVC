@@ -7,3 +7,12 @@ E:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.AssemblyInfoIn
 E:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.AssemblyInfo.cs
 E:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.dll
 E:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.pdb
+D:\AspNetCoreMVC\Capitulo01\Modelo\bin\Debug\netcoreapp2.1\Modelo.deps.json
+D:\AspNetCoreMVC\Capitulo01\Modelo\bin\Debug\netcoreapp2.1\Modelo.dll
+D:\AspNetCoreMVC\Capitulo01\Modelo\bin\Debug\netcoreapp2.1\Modelo.pdb
+D:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.csprojAssemblyReference.cache
+D:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.csproj.CoreCompileInputs.cache
+D:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.AssemblyInfoInputs.cache
+D:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.AssemblyInfo.cs
+D:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.dll
+D:\AspNetCoreMVC\Capitulo01\Modelo\obj\Debug\netcoreapp2.1\Modelo.pdb
