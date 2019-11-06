@@ -11,5 +11,6 @@ namespace Modelo.Cadastros
         public Instituicao Instituicao { get; set; }
 
         public virtual ICollection<Curso> Cursos { get; set; }
+
     }
 }

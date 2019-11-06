@@ -1,35 +1,29 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
+using Capitulo01.Models.Infra;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Modelo.Cadastros;
+using Modelo.Discente;
 
 namespace Capitulo01.Data
 {
-    public class IESContext : DbContext
+    public class IESContext : IdentityDbContext<UsuarioDaAplicacao>
     {
 
         public DbSet<Departamento> Departamentos { get; set; }
         public DbSet<Instituicao> Instituicoes { get; set; }
         public DbSet<Curso> Cursos { get; set; }
-        public DbSet<Disciplina> Disciplina { get; set; }
+        public DbSet<Disciplina> Disciplinas { get; set; }
+        public DbSet<Academico> Academicos { get; set; }
+
+
 
         public IESContext(DbContextOptions<IESContext> options) : base(options)
         {
 
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Departamento>().ToTable("Departamento");
-
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=IESCasaDoCodigo;Trusted_Connection=True;MultipleActiveResultSets=true");
-
-        }
-
-        // Criando relacionamento via código usando Fluent API
+        //  Fluent API para configurar a chave primária e os relacionamentos na base de dados
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -47,6 +41,13 @@ namespace Capitulo01.Data
                 .WithMany(cd => cd.CursosDisciplinas)
                 .HasForeignKey(d => d.DisciplinaID);
         }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=IESCasaDoCodigo;Trusted_Connection=True;MultipleActiveResultSets=true");
+
+        }
+
 
     }
 

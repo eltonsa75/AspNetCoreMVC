@@ -19,6 +19,36 @@ namespace Capitulo01.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Modelo.Cadastros.Curso", b =>
+                {
+                    b.Property<long?>("CursoID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long?>("DepartamentoID");
+
+                    b.Property<string>("Nome");
+
+                    b.HasKey("CursoID");
+
+                    b.HasIndex("DepartamentoID");
+
+                    b.ToTable("Cursos");
+                });
+
+            modelBuilder.Entity("Modelo.Cadastros.CursoDisciplina", b =>
+                {
+                    b.Property<long?>("CursoID");
+
+                    b.Property<long?>("DisciplinaID");
+
+                    b.HasKey("CursoID", "DisciplinaID");
+
+                    b.HasIndex("DisciplinaID");
+
+                    b.ToTable("CursoDisciplina");
+                });
+
             modelBuilder.Entity("Modelo.Cadastros.Departamento", b =>
                 {
                     b.Property<long?>("DepartamentoID")
@@ -33,7 +63,20 @@ namespace Capitulo01.Migrations
 
                     b.HasIndex("InstituicaoID");
 
-                    b.ToTable("Departamento");
+                    b.ToTable("Departamentos");
+                });
+
+            modelBuilder.Entity("Modelo.Cadastros.Disciplina", b =>
+                {
+                    b.Property<long?>("DisciplinaID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Nome");
+
+                    b.HasKey("DisciplinaID");
+
+                    b.ToTable("Disciplinas");
                 });
 
             modelBuilder.Entity("Modelo.Cadastros.Instituicao", b =>
@@ -49,6 +92,47 @@ namespace Capitulo01.Migrations
                     b.HasKey("InstituicaoID");
 
                     b.ToTable("Instituicoes");
+                });
+
+            modelBuilder.Entity("Modelo.Discente.Academico", b =>
+                {
+                    b.Property<long?>("AcademicoID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("Nascimento")
+                        .IsRequired();
+
+                    b.Property<string>("Nome")
+                        .IsRequired();
+
+                    b.Property<string>("RegistroAcademico")
+                        .IsRequired()
+                        .HasMaxLength(10);
+
+                    b.HasKey("AcademicoID");
+
+                    b.ToTable("Academicos");
+                });
+
+            modelBuilder.Entity("Modelo.Cadastros.Curso", b =>
+                {
+                    b.HasOne("Modelo.Cadastros.Departamento", "Departamento")
+                        .WithMany("Cursos")
+                        .HasForeignKey("DepartamentoID");
+                });
+
+            modelBuilder.Entity("Modelo.Cadastros.CursoDisciplina", b =>
+                {
+                    b.HasOne("Modelo.Cadastros.Curso", "Curso")
+                        .WithMany("CursosDisciplinas")
+                        .HasForeignKey("CursoID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Modelo.Cadastros.Disciplina", "Disciplina")
+                        .WithMany("CursosDisciplinas")
+                        .HasForeignKey("DisciplinaID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Modelo.Cadastros.Departamento", b =>

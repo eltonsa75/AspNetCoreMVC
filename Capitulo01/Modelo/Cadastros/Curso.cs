@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Modelo.Cadastros
 {
-    class Curso
+    public class Curso
     {
-
         public long? CursoID { get; set; }
         public string Nome { get; set; }
 
