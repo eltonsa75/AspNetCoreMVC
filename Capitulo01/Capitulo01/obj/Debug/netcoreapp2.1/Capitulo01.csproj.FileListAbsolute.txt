@@ -136,3 +136,5 @@ D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Areas\Disce
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Areas\Discente\Views\_ViewImports.g.cshtml.cs
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Areas\Cadastros\Views\Departamento\_PartialDetailsContentCard.g.cshtml.cs
 D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Areas\Cadastros\Views\Instituicao\_ComDepartamentos.g.cshtml.cs
+D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Infra\Acessar.g.cshtml.cs
+D:\AspNetCoreMVC\Capitulo01\Capitulo01\obj\Debug\netcoreapp2.1\Razor\Views\Infra\RegistrarNovoUsuario.g.cshtml.cs

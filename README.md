@@ -30,5 +30,5 @@ Partial View
 
 Partial Views são visões que contêm código (HTML e/ou Razor) e são projetadas para serem renderizadas como parte de uma visão. elas não possuem layouts, como as visões, e podem ser "inseridas" dentro de diversas visões, como fossem um componente ou controle.
 
-
+Area
 

@@ -15,13 +15,13 @@
     </environment>
 }
 
-<div class="card-block">
-    <div class="card-header text-white bg-secondary text-center h1">Exibindo uma departamento existente</div>
+    <div class="card-block">
+        <div class="card-header text-white bg-secondary text-center h1">Exibindo uma departamento existente</div>
 
-    @{await Html.RenderPartialAsync("~/Views/Departamento/_PartialDetailsContentCard.cshtml", Model); }
+        @{await Html.RenderPartialAsync("~/Areas/Cadastros/Views/Departamento/_PartialDetailsContentCard.cshtml", Model); }
 
-    <div class="card-footer bg-info text-center text-white">
-        <a asp-action="Edit" class="btn btn-warning" asp-route-id="@Model.DepartamentoID">Alterar</a> |
-        <a asp-action="Index" class="btn btn-warning">Retornar à listagem de departamentos</a>
+        <div class="card-footer bg-info text-center text-white">
+            <a asp-action="Edit" class="btn btn-warning" asp-route-id="@Model.DepartamentoID">Alterar</a> |
+            <a asp-action="Index" class="btn btn-warning">Retornar à listagem de departamentos</a>
+        </div>
     </div>
-</div>
