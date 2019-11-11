@@ -1,9 +1,9 @@
 ﻿
-using Capitulo01.Models.Infra;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 using Modelo.Cadastros;
 using Modelo.Discente;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Capitulo01.Models.Infra;
 
 namespace Capitulo01.Data
 {

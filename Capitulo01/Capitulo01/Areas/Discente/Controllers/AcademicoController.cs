@@ -1,9 +1,11 @@
 ﻿using Capitulo01.Data;
 using Capitulo01.Data.DAL.Discente;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Modelo.Discente;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace Capitulo01.Areas.Discente.Controllers
@@ -63,7 +65,7 @@ namespace Capitulo01.Areas.Discente.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nome,RegistroAcademico,Nascimento")] Academico academico)
+        public async Task<IActionResult> Create([Bind("Nome,RegistroAcademico,Nascimento,")] Academico academico, IFormFile foto)
         {
             try
             {
@@ -81,10 +83,11 @@ namespace Capitulo01.Areas.Discente.Controllers
             return View(academico);
         }
 
+        
         //GET: Academico/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long? id, [Bind("AcademicoID,Nome,RegistroAcademico,Nascimento")] Academico academico)
+        public async Task<IActionResult> Edit(long? id, [Bind("AcademicoID,Nome,RegistroAcademico,Nascimento")] Academico academico, IFormFile foto)
         {
             if (id != academico.AcademicoID)
             {
@@ -95,6 +98,11 @@ namespace Capitulo01.Areas.Discente.Controllers
             {
                 try
                 {
+                    var stream = new MemoryStream();
+                    await foto.CopyToAsync(stream);
+                    academico.Foto = stream.ToArray();
+                    academico.FotoMimeType = foto.ContentType;
+
                     await academicoDAL.GravarAcademico(academico);
                 }
                 catch (DbUpdateConcurrencyException)
